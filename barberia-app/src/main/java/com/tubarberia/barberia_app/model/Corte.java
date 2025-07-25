@@ -16,10 +16,20 @@ public class Corte {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombreBarbero;
-    private String cliente;
-    private String dni;
-    private String tipoServicio;
-    private String tipoPago;
-    
+    @ManyToOne
+    @JoinColumn(name = "barbero_id") // Esta columna se usará como FK
+    private Barbero barbero;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_servicio_id")
+    private TipoServicio tipoServicio;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_pago_id")
+    private TipoPago tipoPago;
+
 }

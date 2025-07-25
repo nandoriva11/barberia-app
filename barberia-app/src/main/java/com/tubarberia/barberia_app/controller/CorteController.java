@@ -34,9 +34,9 @@ public class CorteController {
     @PostMapping
     public ResponseEntity<Corte> crear(@RequestBody Corte corte) {
         System.out.println("Corte Recibido:" + corte);
-        System.out.println("Barbero: " + corte.getNombreBarbero());
+        //System.out.println("Barbero: " + corte.getNombreBarbero());
         System.out.println("Cliente: " + corte.getCliente());
-        System.out.println("DNI: " + corte.getDni());
+        //System.out.println("DNI: " + corte.getDni());
         System.out.println("Servicio: " + corte.getTipoServicio());
         System.out.println("Pago: " + corte.getTipoPago());
 
