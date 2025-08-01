@@ -18,8 +18,4 @@ public class Barbero extends Persona{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToMany(mappedBy = "barbero", cascade = CascadeType.ALL, orphanRemoval = true)
-    @ToString.Exclude
-    private List<Corte> cortes = new ArrayList();
 }

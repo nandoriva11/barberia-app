@@ -26,7 +26,4 @@ public class Cliente extends Persona{
     public void asignarFechaRegistro() {
         this.fechaRegistro = LocalDate.now();
     }
-
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Corte> cortes = new ArrayList<>();
 }
